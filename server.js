@@ -3,6 +3,10 @@ require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql2/promise');
 const cors = require('cors');
+app.use(cors({
+  origin: ['https://portofolio-frontend-alpha.vercel.app/', 'http://localhost:3000'],
+  credentials: true
+}));
 const bodyParser = require('body-parser');
 
 const app = express();
